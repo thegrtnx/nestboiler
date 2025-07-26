@@ -26,13 +26,13 @@ A simple script to **bootstrap your NestJS authentication project** with:
 ### Option 1 — Provide a project name
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/thegrtnx/nestboiler/main/setup.sh) my-app
+bash <(curl -sSL https://raw.githubusercontent.com/thegrtnx/nestboiler/main/bash/setup.sh) my-app
 ```
 
 ### Option 2 — Interactive (you’ll be prompted for the name)
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/thegrtnx/nestboiler/main/setup.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/thegrtnx/nestboiler/main/bash/setup.sh)
 ```
 
 ---
