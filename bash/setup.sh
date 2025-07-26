@@ -87,9 +87,9 @@ fi
 # ===== SETUP .env FILE =====
 colored_echo 36 "🛠 Setting up .env file..."
 
-if [ -f ".env.sample" ]; then
-  cp .env.sample .env
-  colored_echo 32 "✔ .env file created from .env.sample."
+if [ -f "env.example" ]; then
+  cp env.example .env
+  colored_echo 32 "✔ .env file created from env.example."
 
   # Generate secure keys
   if command -v openssl &> /dev/null; then
