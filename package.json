@@ -6,9 +6,11 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "build": "pnpm exec prisma db push && pnpm exec prisma generate && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
+    "prisma:prod": "pnpm exec prisma db pull && pnpm exec prisma migrate deploy && pnpm exec prisma generate && pnpm exec prisma studio",
+    "prisma:dev": "pnpm exec prisma migrate dev && pnpm exec prisma generate && pnpm exec prisma studio",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -17,7 +19,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "seed": "pnpm exec ts-node --transpile-only prisma/seed.ts"
   },
   "dependencies": {
     "@nestjs-modules/mailer": "^2.0.2",
