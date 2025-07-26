@@ -119,7 +119,7 @@ EOF
   rm .env.bak
   colored_echo 32 "✔ PLATFORM_NAME, REFRESH_SECRET_KEY, and SECRET_KEY updated in .env"
 else
-  colored_echo 33 "⚠ .env.sample not found. Skipping .env setup."
+  colored_echo 33 "⚠ env.example not found. Skipping env setup."
 fi
 
 # ===== INSTALL DEPENDENCIES =====
